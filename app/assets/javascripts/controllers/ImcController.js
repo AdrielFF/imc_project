@@ -7,11 +7,11 @@ class ImcController {
 
   }
 
-  calculate(event){
+  getImc(event){
 
     event.preventDefault();
 
-    this.result = new Result(this.weight.value, this.height.value);
+    this.result = new DadosPessoa(this.weight.value, this.height.value);
 
     let view = new View(document.getElementById('result'));
 

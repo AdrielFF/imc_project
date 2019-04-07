@@ -1,10 +1,14 @@
-class Result {
+class DadosPessoa {
 
   constructor(weight, height){
 
     this.weight = weight;
     this.height = height;
 
+    this.calculateImc();
+  }
+
+  calculateImc(){
     let heightSqr = this.height * this.height;
     let result = this.weight/heightSqr;
     this.result = Math.floor(result);

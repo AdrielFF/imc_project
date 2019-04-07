@@ -11,7 +11,7 @@
 
     <h1 class="text-center">IMC</h1>
 
-    <form onsubmit="imcController.calculate(event);" class="form form-bordered">
+    <form onsubmit="imcController.getImc(event);" class="form form-bordered">
 
       <div class="form-group col-md-6 offset-md-3">
         <label for="height">Altura</label>
@@ -29,7 +29,7 @@
     <div id="result"></div>
   </body>
   <script src="assets/javascripts/controllers/ImcController.js"></script>
-  <script src="assets/javascripts/models/Result.js"></script>
+  <script src="assets/javascripts/models/DadosPessoa.js"></script>
   <script src="assets/javascripts/views/View.js"></script>
   <script>
     const imcController = new ImcController();
