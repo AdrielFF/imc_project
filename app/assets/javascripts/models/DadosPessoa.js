@@ -4,21 +4,17 @@ class DadosPessoa {
 
     this.weight = weight;
     this.height = height;
-
-    this.calculateImc();
   }
 
-  calculateImc(){
-    let heightSqr = this.height * this.height;
-    let result = this.weight/heightSqr;
-    this.result = Math.floor(result);
-  }
+  // calculateImc(){
+  //
+  //   let heightSqr = this.height * this.height;
+  //   let result = this.weight/heightSqr;
+  //   this.result = Math.floor(result);
+  //   return this.result;
+  // }
 
-  getResult(){
-    return this.result;
-  }
-
-  getSituation(){
+  get situation(){
 
     if(this.result < 18.5){
 
@@ -44,6 +40,14 @@ class DadosPessoa {
 
       return "obesidade grau 3";
     }
+
+  }
+
+  get result(){
+
+    let heightSqr = this.height * this.height;
+    let result = this.weight/heightSqr;
+    return Math.floor(result);
 
   }
 
