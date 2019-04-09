@@ -11,7 +11,7 @@
 
     <h1 class="text-center">IMC</h1>
 
-    <form onsubmit="imcController.getImc(event);" class="form form-bordered">
+    <form onsubmit="patientController.getImc(event);" class="form form-bordered">
 
       <div class="form-group col-md-6 offset-md-3">
         <label for="height">Altura</label>
@@ -26,13 +26,13 @@
         <button class="btn btn-primary" type="submit">Calcular</button>
       </div>
     </form>
-    <div id="result"></div>
+    <div id="resultImc"></div>
   </body>
   <script src="assets/javascripts/views/View.js"></script>
-  <script src="assets/javascripts/views/ResultView.js"></script>
-  <script src="assets/javascripts/controllers/ImcController.js"></script>
-  <script src="assets/javascripts/models/DadosPessoa.js"></script>
+  <script src="assets/javascripts/views/PatientView.js"></script>
+  <script src="assets/javascripts/controllers/PatientController.js"></script>
+  <script src="assets/javascripts/models/Patient.js"></script>
   <script>
-    const imcController = new ImcController();
+    const patientController = new PatientController();
   </script>
 </html>

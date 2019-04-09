@@ -6,7 +6,7 @@ class View {
 
   }
 
-  template(){
+  template(model){
     console.log("está vindo pra cá");
   }
 

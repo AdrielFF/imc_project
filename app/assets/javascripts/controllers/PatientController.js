@@ -1,4 +1,4 @@
-class ImcController {
+class PatientController {
 
   constructor(){
 
@@ -11,9 +11,9 @@ class ImcController {
 
     event.preventDefault();
 
-    let model = new DadosPessoa(this.weight.value, this.height.value);
+    let model = new Patient(this.weight.value, this.height.value);
 
-    let view = new View(document.getElementById('result'));
+    let view = new View(document.getElementById('resultImc'));
 
     view.update(model);
 
