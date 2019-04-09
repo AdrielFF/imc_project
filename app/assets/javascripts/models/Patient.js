@@ -20,8 +20,6 @@ class Patient {
 
   get imcDescription(){
 
-    console.log(this.calculateImc());
-
     if(this.calculateImc() < 18.5){
 
       return "abaixo do peso";

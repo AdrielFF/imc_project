@@ -13,7 +13,7 @@ class PatientController {
 
     let model = new Patient(this.weight.value, this.height.value);
 
-    let view = new View(document.getElementById('resultImc'));
+    let view = new PatientView(document.getElementById('resultImc'));
 
     view.update(model);
 

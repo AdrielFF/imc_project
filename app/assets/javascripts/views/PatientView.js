@@ -1,7 +1,7 @@
-class PatientView extends View {
+class PatientView {
 
   constructor(element){
-    super(element);
+    this.element = element;
 
   }
 
@@ -12,6 +12,10 @@ class PatientView extends View {
       <p>situação: ${model.imcDescription}</p>
     </div>`;
 
+  }
+
+  update(model){
+    this.element.innerHTML = this.template(model);
   }
 
 }
