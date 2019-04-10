@@ -1,17 +1,14 @@
 class Patient {
 
   constructor(pName, pAge, pWeight, pHeight){
-
+    
     this.patient = {
       name: pName,
       age: pAge,
       weight: pWeight,
       height: pHeight
     }
-   /* this.name = name
-    this.age = age
-    this.weight = weight
-    this.height = height*/
+
   }
 
   get imc(){
