@@ -2,21 +2,17 @@ class PatientController {
 
   constructor(){
 
-    this.weight = document.getElementById("weight");
-    this.height = document.getElementById("height");
-
+    this.inputWeight = document.getElementById("weight")
+    this.inputHeight = document.getElementById("height")
+    this.target = document.getElementById('resultImc')
   }
 
   getImc(event){
+    event.preventDefault()
 
-    event.preventDefault();
+    let model = new Patient(this.inputWeight.value, this.inputHeight.value)
+    let view = new PatientView(this.target)
 
-    let model = new Patient(this.weight.value, this.height.value);
-
-    let view = new PatientView(document.getElementById('resultImc'));
-
-    view.update(model);
-
+    view.update(model)
   }
-
 }
