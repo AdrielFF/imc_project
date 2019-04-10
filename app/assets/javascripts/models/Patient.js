@@ -2,50 +2,44 @@ class Patient {
 
   constructor(weight, height){
 
-    this.weight = weight;
-    this.height = height;
-  }
-
-  calculateImc(){
-
-     let heightSqr = this.height * this.height;
-     let resultImc = this.weight/heightSqr;
-     return Math.floor(resultImc);
+    this.weight = weight
+    this.height = height
   }
 
   get imc(){
-     return this.calculateImc();
+    return (this.weight / (this.height * this.height)).toFixed(0)
   }
-
 
   get imcDescription(){
 
-    if(this.calculateImc() < 18.5){
+    let msg
+    const imc = this.imc
+    switch (true) {
+      case imc < 18.5:
+        msg = "Abaixo do peso"
+        break
 
-      return "abaixo do peso";
+      case imc >= 18.5 && imc <= 24.9:
+        msg = "Peso normal"
+        break
 
-    }else if(this.calculateImc() >= 18.5 && this.calculateImc() <= 24.9){
+      case imc >= 25 && imc <= 29.9:
+        msg = "Sobrepeso"
+        break
 
-      return "peso normal";
+      case imc >= 30 && imc <= 34.9:
+        msg = "obesidade grau 1"
+        break
 
-    }else if (this.calculateImc() >= 25 && this.calculateImc() <= 29.9){
+      case imc >= 35 && imc <= 39.9:
+        msg = "obesidade grau 2"
+        break
 
-      return "sobrepeso";
-
-    }else if(this.calculateImc() >= 30 && this.calculateImc() <= 34.9){
-
-      return "obesidade grau 1";
-
-    }else if(this.calculateImc() >= 35 && this.calculateImc() <= 39.9){
-
-      return "obesidade grau 2";
-
-    }else{
-
-      return "obesidade grau 3";
+      default:
+        msg = "obesidade grau 3"
+        break
     }
 
+    return msg
   }
-
-
 }
