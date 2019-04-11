@@ -2,11 +2,11 @@ class PatientController {
 
   constructor(){
 
-    this.inputName = document.getElementById("weight")
-    this.inputAge = document.getElementById("height")
-    this.inputWeight = document.getElementById("weight")
-    this.inputHeight = document.getElementById("height")
-    this.target = document.getElementById('resultImc')
+    this.inputName = document.getElementById("weightInput")
+    this.inputAge = document.getElementById("heightInput")
+    this.inputWeight = document.getElementById("weightInput")
+    this.inputHeight = document.getElementById("heightInput")
+    this.target = document.getElementById('resultImcInput')
   }
 
   getImc(event){

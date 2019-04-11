@@ -26,25 +26,30 @@
 
             <div id="name-section">
               <label for="name">Nome</label>
-              <input class="form-control" type="text" name="name" id="name" placeholder="Nome" required>
+              <input class="form-control" type="text" name="name" id="nameInput" placeholder="Nome" required>
             </div>
 
             <div id="age-section">
               <label for="age">Idade</label>
-              <input class="form-control" type="number" name="age" id="age" min="0" placeholder="idade" required>
+              <input class="form-control" type="number" name="age" id="ageInput" min="0" placeholder="idade" required>
             </div>
 
           </div>
 
           <div class="form-group" id="height-section">
+
             <label for="height">Altura</label>
-            <input class="form-control" type="float" step="0.01" maxlength="4" name="height" min="0" id="height" placeholder="0.00" required>
+            <input class="form-control" type="float"
+            step="0.01" maxlength="4" name="height" min="0" id="heightInput" pattern="[^abc]"placeholder="0.00" required>
+
           </div>
 
           <div class="form-group" id="weight-section">
+
             <label for="weight">Peso</label>
-            <input class="form-control" type="number" step="0.01" name="weight" id="weight" min="0" placeholder="0.00" required>
+            <input class="form-control" type="number" step="0.01" name="weight" id="weightInput" min="0" placeholder="0.00" required>
           </div>
+
           <div id="btn-container">
             <button class="btn btn-primary" type="submit">Calcular</button>
           </div>
@@ -58,10 +63,12 @@
     </footer>
   </body>
 
+  <script src="helpers/FormValidation.js"></script>
   <script src="assets/javascripts/views/PatientView.js"></script>
   <script src="assets/javascripts/controllers/PatientController.js"></script>
   <script src="assets/javascripts/models/Patient.js"></script>
   <script>
     const patientController = new PatientController();
+    const formValidation = new FormValidation();
   </script>
 </html>
