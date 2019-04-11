@@ -1,8 +1,33 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+/* RESET */
+*{margin: 0; padding: 0; color: #fff; font-family: 'Roboto', sans-serif;}
 
-.form {
-  margin-bottom: 30px;
-}
+/* HEADER */
+header {width: 100%; height: 50px;  background-color: rgba(255,255,255,0); display: flex;
+        justify-content: flex-start;  align-items: flex-start;}
+header p {color: #C43C29; margin-left: 25px ; font-size: 2em; font-weight: bold;}
+
+/* BODY */
+body {background-color: rgba(255, 37, 0, 0.5); display: flex; flex-wrap: wrap; justify-content: center;}
+
+main {display:flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%;}
+
+.apresentation-section {width: 100%; height: 450px; background-image: url("../images/healthy-foods.jpg");
+                        background-size: cover; background-position: center; display: flex; flex-direction: column;
+                        align-items: center; justify-content: center;}
+.apresentation-section h1 {font-size: 5em; color:#FF4B44; font-weight: bold;}
+.apresentation-section h3 {font-size: 2em;color:#FF4B44; font-weight: bold;}
+
+.form-container {width: 100%; padding: 25px 20%; background-color: rgba(255,255,255,0.9); display: flex; justify-content: center;}
+.form-container form {width: 60%;}
+.form-container label{color: #63271F;}
+.form-container form .form-group {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.form-container form .form-group #age-section {width: 20%;}
+.form-container form .form-group #name-section {width: 70%;}
+.form-container form #height-section, #weight-section {width: 75px;}
+.form-container form #btn-container{width: 100%; display: flex; justify-content: center;}
+
+#resultImc { width: 600px;}
+
+/* FOOTER */
+footer { width:100%; height: 75px; background-color: #C43C29; display: flex;  justify-content: center; align-items: flex-end}
+footer p {font-weight: 1em;}
