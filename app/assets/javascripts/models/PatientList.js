@@ -9,7 +9,7 @@ class PatientList {
   }
 
   get list(){
-    return this.patients
+    return [].concat(this.patients)
   }
 
 }
