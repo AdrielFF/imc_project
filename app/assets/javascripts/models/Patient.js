@@ -1,18 +1,16 @@
 class Patient {
 
   constructor(pName, pAge, pWeight, pHeight){
-    
-    this.patient = {
-      name: pName,
-      age: pAge,
-      weight: pWeight,
-      height: pHeight
-    }
 
+    this.name = pName
+    this.age = pAge
+    this.weight = pWeight
+    this.height = pHeight
   }
 
-  get imc(){
-    return (this.patient.weight / (this.patient.height * this.patient.height)).toFixed(0)
+  calculateImc(patient){
+    this.imc = (patient.weight / (patient.height * patient.height)).toFixed(0)
+    return this.imc
   }
 
   get imcDescription(){
