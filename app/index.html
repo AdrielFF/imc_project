@@ -39,15 +39,15 @@
           <div class="form-group" id="height-section">
 
             <label for="height">Altura</label>
-            <input class="form-control" maxlength="4"
-            step="0.01" name="height" min="0" id="heightInput" placeholder="0.00" required>
+            <input maxlength="5" class="form-control"
+             name="height" step="0.01" min="0" id="heightInput" placeholder="0.00" required>
 
           </div>
 
           <div class="form-group" id="weight-section">
 
             <label for="weight">Peso</label>
-            <input class="form-control" name="weight" id="weightInput" min="0" placeholder="0.00" required>
+            <input maxlength="6" class="form-control" name="weight" id="weightInput" min="0" placeholder="0.00" required>
 
           </div>
 
@@ -68,7 +68,7 @@
     </footer>
   </body>
 
-  <script src="helpers/FormValidation.js"></script>
+  <script src="assets/javascripts/helpers/InputMask.js"></script>
   <script src="assets/javascripts/views/PatientView.js"></script>
   <script src="assets/javascripts/controllers/PatientController.js"></script>
   <script src="assets/javascripts/models/ImcConsultation.js"></script>

@@ -8,6 +8,7 @@ class PatientController {
     this.inputHeight = document.querySelector("#heightInput")
     this.target = document.querySelector('#target')
 
+    new InputMask([this.inputHeight, this.inputWeight])
     this.patientList = new PatientList()
     this.view = new PatientView(this.target)
   }
@@ -23,15 +24,6 @@ class PatientController {
 
     this.view.update(this.patientList.list)
     this.clearForm()
-  }
-
-  getImc(event){
-    event.preventDefault()
-
-    let model = new Patient(this.inputName.value, this.inputAge.value ,this.inputWeight.value, this.inputHeight.value)
-    let view = new PatientView(this.target)
-
-    view.update(model)
   }
 
   clearForm(){
