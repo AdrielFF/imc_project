@@ -23,7 +23,7 @@ class PatientView {
 
               </thead>
 
-              </tbody>
+              <tbody>
               ${model.map(data => `
                 <tr>
                   <td>${data.name}</td>
@@ -36,7 +36,7 @@ class PatientView {
                 `
               )}
               </tbody>
-            <table>`;
+            </table>`;
 
   }
 

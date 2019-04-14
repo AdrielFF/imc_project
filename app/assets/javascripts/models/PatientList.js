@@ -12,4 +12,8 @@ class PatientList {
     return [].concat(this.patients)
   }
 
+  clear(){
+    this.patients = []
+  }
+
 }

@@ -26,7 +26,7 @@
 
             <div id="name-section">
               <label for="name">Nome</label>
-              <input class="form-control" type="text" name="name" id="nameInput" placeholder="Nome" required>
+              <input class="form-control" type="text" pattern="[A-Za-z]{1,60}" name="name" id="nameInput" placeholder="Nome" required>
             </div>
 
             <div id="age-section">
@@ -59,7 +59,29 @@
         </form>
       </section>
 
-      <section id="target">
+      <section class="table-controler">
+        <button class="btn btn-primary" onclick="patientController.clearTable()">Limpar tabela</button>
+      </section>
+
+      <section class="table-section" id="target">
+
+        <table class="table">
+          <thead>
+            <tr>
+
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Altura</th>
+              <th>Peso</th>
+              <th>IMC</th>
+              <th>Resultado<th>
+              </tr>
+
+          </thead>
+
+          <tbody>
+          </tbody>
+        </table>
       </section>
 
     </main>

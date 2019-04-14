@@ -26,6 +26,11 @@ class PatientController {
     this.clearForm()
   }
 
+  clearTable(){
+    this.patientList.clear()
+    this.view.update(this.patientList.list)
+  }
+
   clearForm(){
     this.inputName.value = ''
     this.inputAge.value = ''
