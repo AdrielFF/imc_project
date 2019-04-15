@@ -12,13 +12,11 @@ class PatientView {
               <thead>
 
                 <tr>
-
                   <th>Nome</th>
                   <th>Idade</th>
                   <th>Altura</th>
                   <th>Peso</th>
-                  <th>IMC</th>
-                  <th>Resultado<th>
+                  <th>Resultado</th>
                 </tr>
 
               </thead>
@@ -30,8 +28,7 @@ class PatientView {
                   <td>${data.age}</td>
                   <td>${data.height} m</td>
                   <td>${data.weight} kg</td>
-                  <td>${data.imc.result}</td>
-                  <td>${data.imc.description}<td/>
+                  <td>${"("+data.imc.result+") "+data.imc.description}</td>
                 <tr>
                 `
               )}

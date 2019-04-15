@@ -17,7 +17,7 @@ class InputMask {
 
   addMask(element){
 
-      let value = element.value.replace(/(\D)/g, "").replace(/^(\d{1,})(\d{2})/g, "$1.$2")
+      let value = element.value.replace(/(\D)/g, "").replace(/(\d{1,})(\d{2})/g, "$1.$2")
       return value
   }
 
