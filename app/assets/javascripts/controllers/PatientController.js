@@ -11,6 +11,8 @@ class PatientController {
     new InputMask([this.inputHeight, this.inputWeight])
     this.patientList = new PatientList()
     this.view = new PatientView(this.target)
+    this.view.update(this.patientList.list)
+
   }
 
   add(event){

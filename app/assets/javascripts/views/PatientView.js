@@ -24,11 +24,11 @@ class PatientView {
               <tbody>
               ${model.map(data => `
                 <tr>
-                  <td>${data.name}</td>
-                  <td>${data.age}</td>
-                  <td>${data.height} m</td>
-                  <td>${data.weight} kg</td>
-                  <td>${"("+data.imc.result+") "+data.imc.description}</td>
+                  <td>${data._name}</td>
+                  <td>${data._age}</td>
+                  <td>${data._height} m</td>
+                  <td>${data._weight} kg</td>
+                  <td>${"("+data._imc.result+") "+data._imc.description}</td>
                 <tr>
                 `
               )}
