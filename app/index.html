@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMC-Consulta</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/stylesheets/css/style.css">
@@ -11,6 +13,15 @@
   <body>
     <header>
       <div class="logo">IMC</div>
+      <i id="trigger-menu" class="fas fa-bars"></i>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#">Link1</a></li>
+          <li><a href="#">Link2</a></li>
+          <li><a href="#">Link3</a></li>
+          <li><a href="#">Link4</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -89,7 +100,7 @@
       <p>Created by Adriel Fernandes</p>
     </footer>
   </body>
-
+  <script src="assets/javascripts/helpers/responsivity/ResponsiveMenu.js"></script>
   <script src="assets/javascripts/helpers/InputMask.js"></script>
   <script src="assets/javascripts/views/PatientView.js"></script>
   <script src="assets/javascripts/controllers/PatientController.js"></script>
@@ -98,5 +109,6 @@
   <script src="assets/javascripts/models/PatientList.js"></script>
   <script>
     const patientController = new PatientController();
+    const responsiveMenu = new ResponsiveMenu();
   </script>
 </html>
