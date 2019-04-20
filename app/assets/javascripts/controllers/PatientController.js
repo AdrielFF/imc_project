@@ -3,7 +3,7 @@ class PatientController {
   constructor(){
 
     this.inputName = document.querySelector("#nameInput")
-    this.inputAge = document.querySelector("#ageInput")
+    this.inputDate = document.querySelector("#dateInput")
     this.inputWeight = document.querySelector("#weightInput")
     this.inputHeight = document.querySelector("#heightInput")
     this.target = document.querySelector('#target')
@@ -20,7 +20,7 @@ class PatientController {
 
     this.patientList.add(new Patient(
           this.inputName.value,
-          this.inputAge.value,
+          new Date(this.inputDate.value),
           this.inputWeight.value,
           this.inputHeight.value))
 
@@ -35,7 +35,7 @@ class PatientController {
 
   clearForm(){
     this.inputName.value = ''
-    this.inputAge.value = ''
+    this.inputDate.value = ''
     this.inputWeight.value = ''
     this.inputHeight.value = ''
     this.inputName.focus()

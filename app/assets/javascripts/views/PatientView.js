@@ -13,10 +13,10 @@ class PatientView {
 
                 <tr>
                   <th>Nome</th>
-                  <th>Idade</th>
                   <th>Altura</th>
                   <th>Peso</th>
                   <th>Resultado</th>
+                  <th>Dia</th>
                 </tr>
 
               </thead>
@@ -25,10 +25,10 @@ class PatientView {
               ${model.map(data => `
                 <tr>
                   <td>${data._name}</td>
-                  <td>${data._age}</td>
                   <td>${data._height} m</td>
                   <td>${data._weight} kg</td>
                   <td>${"("+data._imc.result+") "+data._imc.description}</td>
+                  <td>${data._date}</td>
                 <tr>
                 `
               )}

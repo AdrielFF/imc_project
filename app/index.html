@@ -25,9 +25,24 @@
     </header>
 
     <main>
-      <section class="apresentation-section">
-        <h1>Calcule seu IMC</h1>
-        <h3>Veja o estado da sua saúde em base do seu IMC</h3>
+      <section class="carousel-container">
+        <div class="carousel-container__apresentation-text">
+          <h1>Acompanhe o resultado dos seus treinos</h1>
+          <h3>Registre seu progresso na tabela abaixo</h3>
+        </div>
+        <div class="carousel-container__image-container">
+          <img src="assets/images/1.jpg">
+        </div>
+        <div class="carousel-container__image-container">
+          <img src="assets/images/2.png">
+        </div>
+        <div class="carousel-container__image-container">
+          <img src="assets/images/3.jpg">
+        </div>
+        <div class="carousel-container__image-container">
+          <img src="assets/images/4.jpg">
+        </div>
+
       </section>
 
       <section class="form-container">
@@ -37,12 +52,13 @@
 
             <div id="name-section">
               <label for="name">Nome</label>
-              <input class="form-control" type="text" pattern="[A-Za-z]{1,60}" name="name" id="nameInput" placeholder="Nome" required>
+              <input class="form-control" type="text" pattern="[A-Za-z]{1,60}"
+              name="name" id="nameInput" placeholder="Nome" required>
             </div>
 
             <div id="age-section">
-              <label for="age">Idade</label>
-              <input class="form-control" type="number" name="age" id="ageInput" min="0" max="999" placeholder="idade" required>
+              <label for="age">Data</label>
+              <input class="form-control" type="date" name="date" id="dateInput" required>
             </div>
 
           </div>
@@ -81,10 +97,10 @@
             <tr>
 
               <th>Nome</th>
-              <th>Idade</th>
               <th>Altura</th>
               <th>Peso</th>
               <th>Resultado</th>
+              <th>Dia</th>
 
             </tr>
 
@@ -100,15 +116,18 @@
       <p>Created by Adriel Fernandes</p>
     </footer>
   </body>
+  <script src="assets/javascripts/helpers/date/Date.js"></script>
+  <script src="assets/javascripts/helpers/carousel/Carousel.js"></script>
   <script src="assets/javascripts/helpers/responsivity/ResponsiveMenu.js"></script>
-  <script src="assets/javascripts/helpers/InputMask.js"></script>
+  <script src="assets/javascripts/helpers/masks/InputMask.js"></script>
   <script src="assets/javascripts/views/PatientView.js"></script>
   <script src="assets/javascripts/controllers/PatientController.js"></script>
   <script src="assets/javascripts/models/ImcConsultation.js"></script>
   <script src="assets/javascripts/models/Patient.js"></script>
   <script src="assets/javascripts/models/PatientList.js"></script>
   <script>
-    const patientController = new PatientController();
-    const responsiveMenu = new ResponsiveMenu();
+    const patientController = new PatientController()
+    const responsiveMenu = new ResponsiveMenu()
+    const carousel = new Carousel()
   </script>
 </html>

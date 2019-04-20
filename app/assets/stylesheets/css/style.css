@@ -5,6 +5,11 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 /* HEADER */
 header {width: 100%; height: 65px; position: relative; background-color: rgba(255, 127, 80, 1); display: flex;
         justify-content: space-between; align-items: center; box-shadow: 0 4px 10px 0px #690101;}
@@ -33,23 +38,87 @@ body {background-color: rgba(255, 37, 0, 0.1); display: flex; flex-wrap: wrap; j
 
 main {display:flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%;}
 
-.apresentation-section {width: 100%; height: 450px; background-image: url("../../images/healthy-foods.jpg");
-                        background-size: cover; background-position: center; display: flex; flex-direction: column;
-                        align-items: center; justify-content: center; z-index: -1; text-align: center;}
-.apresentation-section h1 {font-size: 5em; color:#FF4B44; font-weight: bold;}
-.apresentation-section h3 {font-size: 2em;color:#FF4B44; font-weight: bold;}
+.carousel-container {
+  width: 100%;
+  height: 450px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-container__image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.carousel-container__apresentation-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container__image-container > img {
+  width: 100%;
+  filter: brightness(.7);
+}
+
+.current {
+  animation-name: moveCurrent;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.next {
+  animation-name: moveNext;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveCurrent {
+  from{
+  left: 0;
+    opacity: 1;
+  }
+  to {
+    left: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveNext {
+  from{
+    left: -100%;
+    opacity: 1;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.carousel-container h1 {font-size: 4em; color:#FF4B44; font-weight: bold;}
+.carousel-container h3 {font-size: 2em;color:#FF4B44; font-weight: bold;}
 
 .form-container {width: 100%; padding: 25px 20%; display: flex; justify-content: center;}
 .form-container form {width: 60%; padding:10px 10px;}
 .form-container label{color: #63271F;}
 .form-container form .form-group {display: flex; flex-wrap: wrap; justify-content: space-between;}
-.form-container form .form-group #age-section {width: 20%;}
-.form-container form .form-group #name-section {width: 70%;}
+.form-container form .form-group #age-section {width: 40%;}
+.form-container form .form-group #name-section {width: 55%;}
 .form-container form #height-section, #weight-section {width: 75px;}
 .form-container form #btn-container{width: 100%; margin:0 auto; display: flex; justify-content: center;}
 
 .table-section {width: 100%; margin: 30px 0; display: flex; justify-content: center;}
-.table-section table {background-color: #fff; border-color: black;  max-width: 500px; width: 100%; text-align: center;}
+.table-section table {background-color: #fff; border-color: black;  max-width: 600px; width: 100%; text-align: center;}
 .table-section table thead{background-color: rgba(255, 127, 80, 1);}
 .table-section table td { color: rgba(0,0,0, 0.7); font-weight: bolder;}
 @media screen and (max-width:975px ){

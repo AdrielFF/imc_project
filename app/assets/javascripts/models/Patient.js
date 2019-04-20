@@ -1,9 +1,9 @@
 class Patient {
 
-  constructor(pName, pAge, pWeight, pHeight){
+  constructor(pName, pDate, pWeight, pHeight){
 
     this._name = pName
-    this._age = pAge
+    this._date = pDate.convert()
     this._weight = pWeight
     this._height = pHeight
     this._imc = new ImcConsultation(this.weight, this.height)
@@ -16,8 +16,8 @@ class Patient {
     return this._name
   }
 
-  get age() {
-    return this._age
+  get date() {
+    return this._date
   }
   get weight() {
     return this._weight

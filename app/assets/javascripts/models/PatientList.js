@@ -5,11 +5,7 @@ class PatientList {
     this.patients = JSON.parse(localStorage.getItem("patiens"))
 
   }
-
-  init(){
-
-  }
-
+  
   add(patient){
 
     if(this.patients == null){
