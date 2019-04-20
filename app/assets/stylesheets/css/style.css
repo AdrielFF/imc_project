@@ -27,7 +27,7 @@ header nav ul li a {text-decoration: none; color: #fff; padding: 25px;}
 header nav ul li:hover a { text-decoration: none; color: #fff; background-color: #C45729;}
 header .fas { position: absolute; right: 55px; font-size: 1.8em; display: none; cursor: pointer;}
 @media screen and (max-width: 950px){
-  header nav { position: absolute; left:-100%; top: 65px; width: 100%; margin: 0; padding: 0;}
+  header nav { position: absolute; left:-100%; top: 65px; width: 100%; margin: 0; padding: 0; z-index: 99;}
   header nav ul li {width: 100%; text-align: center; background-color: #C43C29;}
   header nav ul li a{ width: 100%; display: block;}
   header .fas {display: block;}
