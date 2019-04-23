@@ -34,6 +34,7 @@ header .fas { position: absolute; right: 55px; font-size: 1.8em; display: none; 
   header .fas {display: block;}
 }
 
+
 .active {
   display: block;
   left: 0;
@@ -50,6 +51,23 @@ main {display:flex; flex-direction: column; justify-content: center; align-items
   text-align: center;
   overflow: hidden;
   position: relative;
+}
+.carousel-container h1 {
+  font-size: 4em;
+  color:#FF4B44;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.carousel-container h3 {
+  font-size: 2em;
+  color:#FF4B44;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px){
+  .carousel-container h1 {
+    font-size: 3em;
+  }
 }
 
 .carousel-container__image-container {
@@ -68,10 +86,6 @@ main {display:flex; flex-direction: column; justify-content: center; align-items
   flex-flow: column;
   justify-content: center;
   align-items: center;
-}
-
-.carousel-container__apresentation-text > h1 {
-  text-transform: uppercase;
 }
 
 .carousel-container__image-container > img {
@@ -116,9 +130,6 @@ main {display:flex; flex-direction: column; justify-content: center; align-items
     opacity: 1;
   }
 }
-
-.carousel-container h1 {font-size: 4em; color:#FF4B44; font-weight: bold;}
-.carousel-container h3 {font-size: 2em;color:#FF4B44; font-weight: bold;}
 
 .form-container {width: 100%; padding: 25px 20%; display: flex; justify-content: center;}
 .form-container form {width: 60%; padding:10px 10px;}
