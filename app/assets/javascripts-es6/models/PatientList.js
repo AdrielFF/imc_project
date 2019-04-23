@@ -2,10 +2,10 @@ class PatientList {
 
   constructor(){
 
-    this.patients = JSON.parse(localStorage.getItem("patiens"))
+    this.patients = JSON.parse(localStorage.patients)
 
   }
-  
+
   add(patient){
 
     if(this.patients == null){

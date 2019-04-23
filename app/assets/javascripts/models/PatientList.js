@@ -8,7 +8,7 @@ var PatientList = function () {
   function PatientList() {
     _classCallCheck(this, PatientList);
 
-    this.patients = JSON.parse(localStorage.getItem("patiens"));
+    this.patients = JSON.parse(localStorage.patients);
   }
 
   _createClass(PatientList, [{
