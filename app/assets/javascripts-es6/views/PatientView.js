@@ -22,16 +22,16 @@ class PatientView {
               </thead>
 
               <tbody>
-              ${model.map(data => `
-                <tr>
+              ${model.map(data =>
+                `<tr>
                   <td>${data._name}</td>
                   <td>${data._height} m</td>
                   <td>${data._weight} kg</td>
                   <td>${"("+data._imc.result+") "+data._imc.description}</td>
                   <td>${data._date}</td>
-                <tr>
-                `
-              )}
+                </tr>`
+
+              ).join('')}
               </tbody>
             </table>`;
 

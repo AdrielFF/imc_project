@@ -13,15 +13,13 @@
     <link rel="stylesheet" href="assets/stylesheets/css/style.css">
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="logo">IMC</div>
       <i id="trigger-menu" class="fas fa-bars"></i>
       <nav class="nav-menu">
         <ul>
-          <li><a href="#">Link1</a></li>
-          <li><a href="#">Link2</a></li>
-          <li><a href="#">Link3</a></li>
-          <li><a href="#">Link4</a></li>
+          <li><a href="#header">Home</a></li>
+          <li><a href="#target">Tabela</a></li>
         </ul>
       </nav>
     </header>
@@ -118,15 +116,15 @@
       <p>Created by Adriel Fernandes</p>
     </footer>
   </body>
-  <script src="assets/javascripts/helpers/date/Date.js"></script>
-  <script src="assets/javascripts/helpers/carousel/Carousel.js"></script>
-  <script src="assets/javascripts/helpers/responsivity/ResponsiveMenu.js"></script>
-  <script src="assets/javascripts/helpers/masks/InputMask.js"></script>
-  <script src="assets/javascripts/views/PatientView.js"></script>
-  <script src="assets/javascripts/controllers/PatientController.js"></script>
-  <script src="assets/javascripts/models/ImcConsultation.js"></script>
-  <script src="assets/javascripts/models/Patient.js"></script>
-  <script src="assets/javascripts/models/PatientList.js"></script>
+  <script src="assets/javascripts-es6/helpers/date/Date.js"></script>
+  <script src="assets/javascripts-es6/helpers/carousel/Carousel.js"></script>
+  <script src="assets/javascripts-es6/helpers/responsivity/ResponsiveMenu.js"></script>
+  <script src="assets/javascripts-es6/helpers/masks/InputMask.js"></script>
+  <script src="assets/javascripts-es6/views/PatientView.js"></script>
+  <script src="assets/javascripts-es6/controllers/PatientController.js"></script>
+  <script src="assets/javascripts-es6/models/ImcConsultation.js"></script>
+  <script src="assets/javascripts-es6/models/Patient.js"></script>
+  <script src="assets/javascripts-es6/models/PatientList.js"></script>
   <script>
     const patientController = new PatientController()
     const responsiveMenu = new ResponsiveMenu()

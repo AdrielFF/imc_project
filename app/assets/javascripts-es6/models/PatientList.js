@@ -1,16 +1,11 @@
 class PatientList {
 
   constructor(){
-
-    this.patients = JSON.parse(localStorage.patients)
+    this.patients = (localStorage.patients == null) ? ([]) : (this.patients =JSON.parse(localStorage.patients))
 
   }
 
   add(patient){
-
-    if(this.patients == null){
-      this.patients = []
-    }
 
     this.patients.push(patient)
     localStorage.setItem("patients", JSON.stringify(this.patients))
