@@ -12,14 +12,14 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/stylesheets/css/style.css">
   </head>
-  <body>
+  <body id="body">
     <header id="header">
       <div class="logo">IMC</div>
       <i id="trigger-menu" class="fas fa-bars"></i>
-      <nav class="nav-menu">
+      <nav class="nav-menu" onclick="responsiveMenu.toggle(this)">
         <ul>
-          <li><a href="#header">Home</a></li>
-          <li><a href="#target">Tabela</a></li>
+          <li><a href="#body">Home</a></li>
+          <li><a href="#table-section">Tabela</a></li>
           <li><a href="#team-section">Nossa Equipe</a></li>
         </ul>
       </nav>
@@ -90,26 +90,30 @@
       <section class="table-controler">
         <button class="btn btn-primary" onclick="patientController.clearTable()">Limpar tabela</button>
       </section>
+      <section class="table-section" id="table-section">
+        <div class="table-section__title">
+          <h3>Registros</h3>
+        </div>
+        <div id="target">
 
-      <section class="table-section" id="target">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
 
-        <table class="table table-bordered">
-          <thead>
-            <tr>
+                <th>Nome</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>Resultado</th>
+                <th>Dia</th>
 
-              <th>Nome</th>
-              <th>Altura</th>
-              <th>Peso</th>
-              <th>Resultado</th>
-              <th>Dia</th>
+              </tr>
 
-            </tr>
+            </thead>
 
-          </thead>
-
-          <tbody>
-          </tbody>
-        </table>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section class="our-team-section" id="team-section">

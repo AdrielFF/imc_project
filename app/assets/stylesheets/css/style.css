@@ -24,13 +24,15 @@ html {
 header {
   width: 100%;
   height: 8vh;
-  position: relative;
+  position: fixed;
+  top: 0;
   background-color: rgba(255, 127, 80, 1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 10px 0px #690101;
   z-index: 99;
+  transition-duration: 0.3s;
 }
 
 header .logo {
@@ -112,6 +114,8 @@ main {
   text-align: center;
   overflow: hidden;
   position: relative;
+  top: 8vh;
+  transition-duration: 0.3s;
 }
 .carousel-container h1 {
   font-size: 4em;
@@ -192,7 +196,7 @@ main {
 
 .form-container {
   width: 90%;
-  margin: 20px auto;
+  margin: 100px auto;
   padding: 25px 20%;
   display: flex;
   justify-content: center;
@@ -240,8 +244,31 @@ main {
 }
 
 .table-section {
+  width: 90%;
+  height: 100%;
+  min-height: 600px;
+  box-shadow: 2px 2px 5px #ccc;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 30px auto;
+  padding: 10px 0;
+}
+
+@media screen and (max-width: 425px){
+  .table-section {
+    width: 100%;
+  }
+}
+
+.table-section__title h3 {
   width: 100%;
-  margin: 30px 0;
+  font-size: 2.5em;
+  color: rgba(0,0,0, 0.8);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#target {
+
   display: flex;
   justify-content: center;
 }

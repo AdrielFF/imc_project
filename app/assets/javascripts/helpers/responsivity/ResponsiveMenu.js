@@ -17,11 +17,40 @@ var ResponsiveMenu = function () {
   _createClass(ResponsiveMenu, [{
     key: "init",
     value: function init() {
+      this.responseMenu();
+      this.hideHeader();
+    }
+  }, {
+    key: "responseMenu",
+    value: function responseMenu() {
       var _this = this;
 
       this.trigger.addEventListener("click", function () {
         _this.menu.classList.toggle("active");
       });
+    }
+  }, {
+    key: "hideHeader",
+    value: function hideHeader() {
+      var prevScrollPos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+
+        if (prevScrollPos > currentScrollPos) {
+          document.getElementById("header").style.top = "0";
+          document.querySelector(".carousel-container").style.top = "8vh";
+        } else {
+          document.getElementById("header").style.top = "-8vh";
+          document.querySelector(".carousel-container").style.top = "0";
+        }
+
+        prevScrollPos = currentScrollPos;
+      };
+    }
+  }, {
+    key: "toggle",
+    value: function toggle(element) {
+      element.classList.toggle("active");
     }
   }]);
 
