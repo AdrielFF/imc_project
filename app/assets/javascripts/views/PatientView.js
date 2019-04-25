@@ -16,8 +16,8 @@ var PatientView = function () {
     value: function template(model) {
 
       return "<table class=\"table table-bordered\">\n              <thead>\n\n                <tr>\n                  <th>Nome</th>\n                  <th>Altura</th>\n                  <th>Peso</th>\n                  <th>Resultado</th>\n                  <th>Dia</th>\n                </tr>\n\n              </thead>\n\n              <tbody>\n              " + model.map(function (data) {
-        return "\n                <tr>\n                  <td>" + data._name + "</td>\n                  <td>" + data._height + " m</td>\n                  <td>" + data._weight + " kg</td>\n                  <td>" + ("(" + data._imc.result + ") " + data._imc.description) + "</td>\n                  <td>" + data._date + "</td>\n                <tr>\n                ";
-      }) + "\n              </tbody>\n            </table>";
+        return "<tr>\n                  <td>" + data._name + "</td>\n                  <td>" + data._height + " m</td>\n                  <td>" + data._weight + " kg</td>\n                  <td>" + ("(" + data._imc.result + ") " + data._imc.description) + "</td>\n                  <td>" + data._date + "</td>\n                </tr>";
+      }).join('') + "\n              </tbody>\n            </table>";
     }
   }, {
     key: "update",

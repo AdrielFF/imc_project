@@ -8,16 +8,12 @@ var PatientList = function () {
   function PatientList() {
     _classCallCheck(this, PatientList);
 
-    this.patients = JSON.parse(localStorage.patients);
+    this.patients = localStorage.patients == null ? [] : this.patients = JSON.parse(localStorage.patients);
   }
 
   _createClass(PatientList, [{
     key: "add",
     value: function add(patient) {
-
-      if (this.patients == null) {
-        this.patients = [];
-      }
 
       this.patients.push(patient);
       localStorage.setItem("patients", JSON.stringify(this.patients));
